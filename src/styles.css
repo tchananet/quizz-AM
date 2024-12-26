@@ -1,0 +1,197 @@
+.app {
+    height: 100vh;
+    display: flex;
+    background-color: #020230;
+    color: white;
+    width: 100%;
+}
+
+
+.main {
+    width: 75%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #020230), url("./assets/bg.png") center;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    height: 50%;
+    position: relative;
+}
+
+.timer {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 10px;
+    left: 80px
+}
+
+.buttom {
+    height: 50%;
+}
+
+.pyramid {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.moneyList {
+    list-style: none;
+    width: 100%;
+    padding: 20px;
+}
+
+.moneyListItem {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.moneyListItem.active {
+    background-color: teal;
+}
+
+.moneyListItemNumber {
+    font-size: 18px;
+    font-weight: 100;
+    width: 20%;
+}
+
+.moneyListItemAmount{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.moneyListItem.active {
+    animation: highlight 0.5s ease-in-out;
+}
+
+@keyframes highlight {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+ 
+
+/* asd *//* General Game Over Screen Styling */
+.gameOver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* Shared content styling */
+.gameOverContent {
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f); /* Sleek dark gradient */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Title Styling */
+.gameOverTitle {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Prize Section */
+.prizeSection {
+    margin-top: 20px;
+}
+
+.gameOverPrize {
+    font-size: 1.5rem;
+    color: #ffb74d; /* Golden color for the text */
+}
+
+/* Highlighted Prize Styling */
+.highlightedPrize {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #ffd700; /* Bright gold for visibility */
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffc107;
+}
+
+/* Button Styling */
+.gameOverButton {
+    margin-top: 30px;
+    background-color: #4caf50; /* Green button */
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gameOverButton:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.gameOverButton:active {
+    transform: scale(1);
+}
+
+/* Win All Scenario */
+.winAll .gameOverContent {
+    background: linear-gradient(135deg, #4caf50, #2e7d32); /* Vibrant green gradient */
+    color: white;
+}
+
+.winAll .gameOverTitle {
+    color: #ffffff; /* Bright white */
+    text-shadow: 0 0 10px #4caf50, 0 0 20px #2e7d32; /* Glow effect */
+}
+
+/* Game Over with Prize Scenario */
+.withPrize .gameOverContent {
+    background: linear-gradient(135deg, #ff9800, #e65100); /* Warm orange gradient */
+    color: white;
+}
+
+.withPrize .gameOverTitle {
+    color: #ffffff; /* Bright white */
+    text-shadow: 0 0 10px #ff9800, 0 0 20px #e65100; /* Glow effect */
+}
+
+/* Game Over with No Prize Scenario */
+.noPrize .gameOverContent {
+    background: linear-gradient(135deg, #b71c1c, #7f0000); /* Deep red gradient */
+    color: white;
+}
+
+.noPrize .gameOverTitle {
+    color: #ff5c5c; /* Soft red */
+    text-shadow: 0 0 10px #b71c1c, 0 0 20px #7f0000; /* Glow effect */
+}
+
+.noPrize .gameOverPrize {
+    color: #ff5c5c; /* Muted red for no prize */
+}
